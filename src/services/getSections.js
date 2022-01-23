@@ -16,7 +16,6 @@ export default function getSections () {
                     const { section } = result;
                     return section; 
                   });
-                console.log(sections);
                 return sections;
             }
         })
