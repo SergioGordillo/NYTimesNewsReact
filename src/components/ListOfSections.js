@@ -7,7 +7,7 @@ export default function ListOfSections ({section}) {
     <div className="container_list_sections mt-4 ml-4">
         {/* <Section section={section}/> */}
         {     
-            section.map(({section})=> 
+            section.map((section)=> 
             
                 <Section 
                     section={section}
