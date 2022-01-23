@@ -11,13 +11,13 @@ export default function getSections () {
         .then(response=> {
             const { data = [] } = response;
             if(Array.isArray(data)){
-                // console.log(response);
-                const sections = data.map(results=>{
-                    console.log(results);
-                    // const results = element.results; 
-                    // console.log(results);
-                    // return  { results }  
+                const {results} = response; 
+                const sections = results.map(result=>{
+                    const { section } = result;
+                    return section; 
                   });
+                console.log(sections);
+                return sections;
             }
         })
 
