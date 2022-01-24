@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function getNewsFilteredBySection (sectionSeached="arts") {
+export default function getNewsFilteredBySection (sectionSearched="arts") {
 
     const API_KEY= "1n8q3iLICZuLSKVhbsbdW9vK3n2joJ9A";
     const URL= `https://api.nytimes.com/svc/mostpopular/v2/viewed/7.json?api-key=${API_KEY}`;
@@ -13,7 +13,6 @@ export default function getNewsFilteredBySection (sectionSeached="arts") {
             if(Array.isArray(data)){
                 const {results} = response; 
                 console.log(results);
-                console.log(sectionSeached)
                 const filteredResults = results.filter(obj => {
                     return obj.section === sectionSearched;
                   });
