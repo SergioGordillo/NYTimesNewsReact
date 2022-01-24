@@ -12,16 +12,12 @@ export default function getNewsFilteredBySection (sectionSearched="arts") {
             const { data = [] } = response;
             if(Array.isArray(data)){
                 const {results} = response; 
-                console.log(results);
                 const filteredResults = results.filter(obj => {
                     return obj.section === sectionSearched;
                   });
-                console.log(`This is my filtered Section: ${filteredResults}`);
-                const sections = results.map(result=>{
-                    const { section } = result;
-                    return section; 
-                  });
-                return sections;
+                const filteredResultsJSON = JSON.stringify(filteredResults);
+                console.log(filteredResultsJSON);
+                return filteredResultsJSON;
             }
         })
 
