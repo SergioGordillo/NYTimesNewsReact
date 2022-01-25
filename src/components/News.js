@@ -4,18 +4,19 @@ export default function News({ newsAttributes }) {
   //I receive here [Object Object Object Object Object Object] Object type
 
   console.log(typeof (newsAttributes));
+  const objectNews = Object.values(newsAttributes);
+  console.log(objectNews);
 
 
+  // const { title, abstract, url } = newsAttributes;
 
-  const { title, abstract, url } = newsAttributes;
-
-  console.log(`title: ${title}`);
-  console.log(`abstract: ${abstract}`);
-  console.log(`url: ${url}`);
+  // console.log(`title: ${title}`);
+  // console.log(`abstract: ${abstract}`);
+  // console.log(`url: ${url}`);
 
   return (
     <div>
-      <h3 className="section-container mr-4 mb-4 pointer">{title}</h3>
+      <h3 className="section-container mr-4 mb-4 pointer">Hello</h3>
     </div>
   )
 
