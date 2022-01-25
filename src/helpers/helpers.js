@@ -1,13 +1,13 @@
 // Function that avoid repeated values in an array
 export function onlyUnique(value, index, self) {
-    return self.indexOf(value) === index;
-}  
+  return self.indexOf(value) === index;
+}
 
-export function getNewsAttributes (filteredResultsJSON=[]) {
-        const newsAttributes = JSON.parse(filteredResultsJSON).map(filteredResultJSON=>{
-            const { title, abstract, url } = filteredResultJSON;
-            console.log(title, abstract, url);
-            return {title, abstract, url}; 
-          });
-        return newsAttributes;
+export function getNewsAttributes(filteredResults) {
+  const newsAttributes = filteredResults.map(filteredResults => {
+    const { title, abstract, url } = filteredResults;
+    console.log(title, abstract, url);
+    return { title, abstract, url };
+  });
+  return newsAttributes;
 };
