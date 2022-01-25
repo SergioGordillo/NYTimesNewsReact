@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { getNewsAttributes } from '../helpers/helpers';
 import getNewsFilteredBySection from '../services/getNewsFilteredBySection';
 import News from './News';
 
 export default function Section({ section }) {
 
+  const [news, setNews] = useState(null);
+
   function showEvent(e) {
-    console.log("pasa por aquí");
     const sectionSearched = e.target.innerText;
     getNewsFilteredBySection(sectionSearched)
       .then((response) => {
         const filteredResults = response;
         const newsAttributes = getNewsAttributes(filteredResults);
-        return (
-          <News newsAttributes={newsAttributes} />
-        )
+        setNews(newsAttributes);
       })
   }
 
@@ -23,6 +22,8 @@ export default function Section({ section }) {
       <h3 className="section-container mr-4 mb-4 pointer"
         onClick={showEvent}
       >{section}</h3>
+
+      {news !== null ? <News newsAttributes={news} /> : null}
     </div>
   )
 

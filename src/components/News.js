@@ -1,7 +1,12 @@
 import React from 'react';
 
 export default function News({ newsAttributes }) {
-  console.log(`newsAttributes: ${newsAttributes}`);
+  //I receive here [Object Object Object Object Object Object] Object type
+
+  console.log(typeof (newsAttributes));
+
+
+
   const { title, abstract, url } = newsAttributes;
 
   console.log(`title: ${title}`);
