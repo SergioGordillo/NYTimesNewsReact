@@ -15,8 +15,10 @@ export default function News({ newsAttributes }) {
   // console.log(`url: ${url}`);
 
   return (
-    <div>
-      <h3 className="section-container mr-4 mb-4 pointer">Hello</h3>
+    <div className="news-container pointer">
+      <img className="news-img" src="https://www.larazon.es/resizer/uw3MSDE8hPhCPKnmhz3x2x-hjGc=/1260x840/smart/filters:format(webp):quality(65)/cloudfront-eu-central-1.images.arcpublishing.com/larazon/JSELGN73UNCCDPCYU2XIROYQYI.jpg" />
+      <h3 className="news-title">Hello</h3>
+      <p className="news-abstract">sdadadadadadasdadadadsasdadsadadsadasdasdasdasdadsdada</p>
     </div>
   )
 
